@@ -4,8 +4,8 @@ import os
 import shutil
 import dicom2fhir_wrapper
 
-successful_path = "/opt/dicom2fhir/data/successful/"
-output_path = "/opt/dicom2fhir/data/output/"
+successful_path = "/opt/dicom2fhir/data/successful/" #path of incoming studies
+output_path = "/opt/dicom2fhir/data/output/" #output path of processed studies
 
 
 def create_app():
@@ -18,7 +18,7 @@ def create_app():
 
     @app.route('/process_study', methods=['POST'])
     def process_study():
-        dicom2fhir_wrapper.process_study(successful_path, output_path)
+        # insert your processing route here
         return "Processed study successfully"
 
     @app.route('/delete_dicoms', methods=['POST'])
