@@ -8,4 +8,4 @@ COPY ./dicom_interval_scheduler_api.py .
 
 USER 65532:65532
 
-ENTRYPOINT ["python3", "helper_api.py"]
+ENTRYPOINT ["python3", "dicom_interval_scheduler_api.py"]
